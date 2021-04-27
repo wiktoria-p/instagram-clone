@@ -43,7 +43,7 @@ input {
   text-align: center;
 }
 
-.post{
+.post {
   width: 100%;
 }
 
@@ -63,7 +63,7 @@ input {
 
 .igpost {
   width: 40%;
-  height: 70vh;
+  height: auto;
   margin: 3% auto;
   display: flex;
   flex-direction: row;
@@ -107,4 +107,3 @@ h1 {
 p {
   margin: 10px;
 }
-
