@@ -19,8 +19,6 @@ nav {
   flex-direction: row;
   flex-wrap: nowrap;
   width: 100%;
-  font-size: 30px;
-
 }
 
 a {
@@ -28,9 +26,11 @@ a {
   text-decoration: none;
   font-family: 'Lobster', cursive;
   color: black;
+  font-size: 30px;
 }
 
-.pprofile {
+.icons {
+  font-size: 25px;
   margin: 10px;
 }
 
@@ -55,16 +55,11 @@ input {
   height: 25px;
 }
 
-.far {
-  margin: 10px;
-  margin-left: 10px;
-  font-size: 25px;
-}
-
 .igpost {
   width: 40%;
   height: auto;
-  margin: 3% auto;
+  margin: 3%;
+  margin-left: 20%;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -85,10 +80,16 @@ input {
   font-size: 20px;
 }
 
-.fa-bookmark {
+.eg-save {
   flex-grow: 1;
   text-align: right;
   margin: 2%;
+  font-size: 25px;
+}
+
+.eg {
+  margin: 5px;
+  font-size: 25px;
 }
 
 .photo {
@@ -106,8 +107,31 @@ h1 {
 
 p {
   margin: 10px;
+  font-size: 15px;
 }
 
 .liked {
   color: red;
+}
+
+.logout {
+  border-top: grey solid 2px;
+}
+
+.active {
+  width: 10%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  font-size: 15px;
+  background-color: white;
+  margin: 10px;
+  margin-right: 5%;
+  padding: 20px;
+  float: right;
+}
+
+
+.shortcut {
+  display: none;
 }
