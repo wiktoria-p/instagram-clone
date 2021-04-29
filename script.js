@@ -1,22 +1,28 @@
+// all hearts list
+let hearts = document.getElementsByClassName("heart")
 
-let heart = document.getElementById("1");
-heart.addEventListener("click", likePost);
-
-let photo = document.getElementById("2");
-photo.addEventListener("dblclick", likePost);
-
-function  likePost(){
-  heart.classList.toggle("liked");
+for (let heart of hearts){
+  heart.addEventListener("click", likePost)
 }
 
-let profilePhoto = document.getElementById("3");
+// all photos list
+let photos = document.getElementsByClassName("photo")
+for (let photo of photos){
+  photo.addEventListener("dblclick", likePost)
+}
 
+// like posts function
+function  likePost(){
+  this.parentElement.querySelector(".heart").classList.toggle("liked")
+}
+
+// profile shortcut
+let profilePhoto = document.getElementById("profile")
 
 function clickProfile(){
-  console.log("jest")
-  let shortProfile = document.getElementById("4");
-  shortProfile.classList.toggle("active");
-  shortProfile.classList.toggle("shortcut");
+  let shortProfile = document.getElementById("shortcut")
+  shortProfile.classList.toggle("active")
+  shortProfile.classList.toggle("shortcut")
 }
 
-profilePhoto.addEventListener("click", clickProfile);
+profilePhoto.addEventListener("click", clickProfile)

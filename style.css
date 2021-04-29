@@ -119,14 +119,14 @@ p {
 }
 
 .active {
-  width: 10%;
+  width: 15%;
   height: auto;
   display: flex;
   flex-direction: column;
   font-size: 15px;
   background-color: white;
   margin: 10px;
-  margin-right: 5%;
+  margin-right: 10%;
   padding: 20px;
   float: right;
 }
