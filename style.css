@@ -2,7 +2,7 @@ body,
 html {
   margin: 0;
   padding: 0;
-  background-color: #F0FFFF;
+  background-color: #F5F5F5;
   max-width: 1540px;
   height: 200vh;
   font-family: Arial, Helvetica, sans-serif;
@@ -43,6 +43,43 @@ input {
   text-align: center;
 }
 
+.stories1 {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 5%;
+}
+
+.stories {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  width: 40%;
+  height: 100%;
+  margin: 1%;
+  margin-left: 20%;
+  border: grey solid 1px;
+  background-color: white;
+  overflow: hidden;
+  transition: 1s;
+}
+
+.chevron {
+  position: absolute;
+  left: 58%;
+  top: 12%;
+  width: 25px;
+  height: 25px;
+  font-size: 20px;
+}
+
+.pp {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin: 2% 2%;
+}
+
 .post {
   width: 100%;
 }
@@ -64,12 +101,13 @@ input {
   flex-direction: row;
   flex-wrap: wrap;
   background-color: #fff;
+  border: grey solid 1px;
 }
 
 .ppost {
   justify-content: flex-start;
   flex-grow: 1;
-  margin: 10px;
+  margin: 5px;
   padding-left: 0;
 }
 
@@ -77,13 +115,13 @@ input {
   flex-grow: 1;
   text-align: right;
   margin: 10px;
-  font-size: 20px;
+  font-size: 15px;
 }
 
 .eg-save {
   flex-grow: 1;
   text-align: right;
-  margin: 2%;
+  margin: 5px;
   font-size: 25px;
 }
 
@@ -101,13 +139,48 @@ input {
 h1 {
   flex-grow: 1;
   padding-left: 60px;
-  font-size: 15px;
+  font-size: 12px;
   margin-top: 2%;
 }
 
-p {
-  margin: 10px;
-  font-size: 15px;
+span {
+  margin: 5px;
+  font-size: 13px;
+}
+
+.comment {
+  display: flex;
+  flex-direction: row;
+  border-top: grey solid 1px;
+  width: 100%;
+}
+
+.com {
+  background: white;
+  border: none;
+  flex-grow: 1;
+}
+
+.smile {
+  font-size: 20px;
+}
+
+textarea {
+  border: none;
+  width: 80%;
+}
+
+button:hover {
+  background-color: #87CEFA;
+}
+
+.com1 {
+  display: inline-block;
+  margin: 5px;
+}
+
+.com3 {
+  font-weight: bold;
 }
 
 .liked {

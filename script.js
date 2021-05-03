@@ -1,11 +1,9 @@
-// all hearts list
 let hearts = document.getElementsByClassName("heart")
 
 for (let heart of hearts){
   heart.addEventListener("click", likePost)
 }
 
-// all photos list
 let photos = document.getElementsByClassName("photo")
 for (let photo of photos){
   photo.addEventListener("dblclick", likePost)
