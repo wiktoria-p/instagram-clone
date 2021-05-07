@@ -24,3 +24,18 @@ function clickProfile(){
 }
 
 profilePhoto.addEventListener("click", clickProfile)
+
+let timeline = document.getElementById("timeline")
+
+function addPost(name){
+  let blueprint = document.getElementById("post_blueprint").cloneNode(true)
+  let userName = blueprint.getElementsByClassName("username")[0]
+  userName.innerHTML = name
+  timeline.appendChild(blueprint)
+  blueprint.classList.toggle("blueprint")
+}
+
+addPost("blablabla")
+addPost("alalalala")
+
+

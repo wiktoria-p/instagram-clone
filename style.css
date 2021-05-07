@@ -208,3 +208,11 @@ button:hover {
 .shortcut {
   display: none;
 }
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+.blueprint {
+  display: none;
+}
