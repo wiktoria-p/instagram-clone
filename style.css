@@ -146,6 +146,7 @@ h1 {
 span {
   margin: 5px;
   font-size: 13px;
+  width: 100%;
 }
 
 .comment {
@@ -208,6 +209,7 @@ button:hover {
 .shortcut {
   display: none;
 }
+
 ul {
   margin: 0;
   padding: 0;
