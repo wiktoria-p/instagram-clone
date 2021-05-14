@@ -1,17 +1,8 @@
-let hearts = document.getElementsByClassName("heart")
 
-for (let heart of hearts){
-  heart.addEventListener("click", likePost)
-}
-
-let photos = document.getElementsByClassName("photo")
-for (let photo of photos){
-  photo.addEventListener("dblclick", likePost)
-}
 
 // like posts function
-function  likePost(){
-  this.parentElement.querySelector(".heart").classList.toggle("liked")
+function  likePost(heart){
+  heart.classList.toggle("liked")
 }
 
 // profile shortcut
@@ -42,19 +33,25 @@ window.addEventListener('scroll',()=>{
 	}
 });
 
+let postCount = 0
+
 // add post with users entry
 function addPost(name = false, description = false){
   let blueprint = document.getElementById("post_blueprint").cloneNode(true)
   let userName = blueprint.getElementsByClassName("username")[0]
   let entry = blueprint.getElementsByClassName("description")[0]
   let photo = blueprint.getElementsByClassName("photo")[0]
+  let heart = blueprint.getElementsByClassName("heart")[0]
   description ||= descriptions[Math.floor(Math.random()*descriptions.length)]
   entry.innerHTML = description
   name ||= names[Math.floor(Math.random()*names.length)]
   userName.innerHTML = name
-  photo.src = "https://picsum.photos/500"
+  photo.src = `https://picsum.photos/seed/${postCount}/800`
+  photo.addEventListener("dblclick", likePost.bind(null, heart))
+  heart.addEventListener("click", likePost.bind(null, heart))
   timeline.appendChild(blueprint)
   blueprint.classList.toggle("blueprint")
+  postCount++
 }
 
 

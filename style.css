@@ -104,6 +104,20 @@ input {
   border: grey solid 1px;
 }
 
+.data {
+  display: flex;
+  width: 100%;
+}
+
+.photos {
+  width: 100%;
+}
+
+.reactions {
+  display: flex;
+  width: 100%;
+}
+
 .ppost {
   justify-content: flex-start;
   flex-grow: 1;
@@ -134,6 +148,8 @@ input {
   height: auto;
   max-width: 100%;
   display: block;
+  margin: 0 auto;
+  overflow: hidden;
 }
 
 h1 {
