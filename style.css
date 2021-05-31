@@ -104,6 +104,22 @@ input {
   border: grey solid 1px;
 }
 
+.comments {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+}
+
+.comm {
+
+  padding-left: 2% !important;
+}
+
+.publish-comment {
+  float: left;
+}
+
 .data {
   display: flex;
   width: 100%;
@@ -152,7 +168,7 @@ input {
   overflow: hidden;
 }
 
-h1 {
+.username {
   flex-grow: 1;
   padding-left: 60px;
   font-size: 12px;
@@ -165,7 +181,7 @@ span {
   width: 100%;
 }
 
-.comment {
+.add-comment {
   display: flex;
   flex-direction: row;
   border-top: grey solid 1px;
@@ -232,5 +248,9 @@ ul {
 }
 
 .blueprint {
+  display: none;
+}
+
+.comment-blueprint {
   display: none;
 }

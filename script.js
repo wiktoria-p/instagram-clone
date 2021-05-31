@@ -33,6 +33,13 @@ window.addEventListener('scroll',()=>{
 	}
 });
 
+
+function addComment() {
+  let publish = document.getElementsByClassName("comment-blueprint") 
+  
+}
+
+
 let postCount = 0
 
 // add post with users entry
@@ -42,6 +49,7 @@ function addPost(name = false, description = false){
   let entry = blueprint.getElementsByClassName("description")[0]
   let photo = blueprint.getElementsByClassName("photo")[0]
   let heart = blueprint.getElementsByClassName("heart")[0]
+  let form = blueprint.getElementsByClassName("add-comment")[0]
   description ||= descriptions[Math.floor(Math.random()*descriptions.length)]
   entry.innerHTML = description
   name ||= names[Math.floor(Math.random()*names.length)]
@@ -49,6 +57,7 @@ function addPost(name = false, description = false){
   photo.src = `https://picsum.photos/seed/${postCount}/800`
   photo.addEventListener("dblclick", likePost.bind(null, heart))
   heart.addEventListener("click", likePost.bind(null, heart))
+  form.addEventListener("submit", addComment())
   timeline.appendChild(blueprint)
   blueprint.classList.toggle("blueprint")
   postCount++

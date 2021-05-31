@@ -76,15 +76,21 @@
         <i class="far fa-bookmark eg-save"></i>
       </div>
       <span class="description"></span>
-      <form method="post" class="comment">
+      <div class="comments">
+      </div>
+      <form method="post" class="add-comment">
         <button class="com smile"><i class="far fa-smile"></i></button>
         <textarea placeholder="add comment" class="addcomment" id="comment_blueprint"></textarea>
-        <button class="com">publish</button>
+        <button type="submit" class="com">publish</button>
       </form>
     </div>
   </section>
   <ul class="timeline" id="timeline">
   </ul>
+  <div class="comment comment-blueprint">
+    <h2 class="username comm"></h2>
+  <span class="publish-comment"></span>
+  </div>
   <script src="script.js"></script>
 </body>
 </html>
