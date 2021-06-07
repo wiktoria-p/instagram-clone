@@ -33,10 +33,20 @@ window.addEventListener('scroll',()=>{
 	}
 });
 
+function eventPrevent (event){
+  event.preventDefault()
+  new FormData(event.target)
+}
 
-function addComment() {
+function addComment(event){
+  // for (let value of event.formData.keys()){
+  //   console.log(value)
+  // }
+  // treść komentarza
+  let comment = event.formData.get("com")
   let publish = document.getElementsByClassName("comment-blueprint") 
-  
+  publish.innerHTML = comment
+  console.log(publish)
 }
 
 
@@ -57,7 +67,8 @@ function addPost(name = false, description = false){
   photo.src = `https://picsum.photos/seed/${postCount}/800`
   photo.addEventListener("dblclick", likePost.bind(null, heart))
   heart.addEventListener("click", likePost.bind(null, heart))
-  form.addEventListener("submit", addComment())
+  form.addEventListener("submit", eventPrevent.bind())
+  form.addEventListener("formdata", addComment.bind())
   timeline.appendChild(blueprint)
   blueprint.classList.toggle("blueprint")
   postCount++

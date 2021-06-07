@@ -181,24 +181,29 @@ span {
   width: 100%;
 }
 
-.add-comment {
+.add {
   display: flex;
   flex-direction: row;
   border-top: grey solid 1px;
   width: 100%;
 }
 
-.com {
-  background: white;
-  border: none;
-  flex-grow: 1;
+.add-comment {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
 }
 
-.smile {
+.publish {
+  background: white;
+  border: none;
+}
+
+.com {
   font-size: 20px;
 }
 
-textarea {
+.addcomment {
   border: none;
   width: 80%;
 }
