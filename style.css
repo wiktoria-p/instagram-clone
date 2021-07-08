@@ -67,7 +67,7 @@ input {
 .chevron {
   position: absolute;
   left: 58%;
-  top: 12%;
+  top: 11%;
   width: 25px;
   height: 25px;
   font-size: 20px;
@@ -230,16 +230,18 @@ button:hover {
 }
 
 .active {
-  width: 15%;
+  width: 12%;
   height: auto;
   display: flex;
   flex-direction: column;
   font-size: 15px;
   background-color: white;
   margin: 10px;
-  margin-right: 10%;
   padding: 20px;
   float: right;
+  position: absolute;
+  top: 5%;
+  right: 3%;
 }
 
 
@@ -258,4 +260,51 @@ ul {
 
 .comment-blueprint {
   display: none;
+}
+
+.messege {
+  display: none;
+}
+
+.active-messege {
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+  height: 50%;
+  background-color: #DCDCDC;
+  position: fixed;
+  bottom: 1%;
+  right: 1%;
+  border-radius: 5%;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 85%;
+  background-color: white;
+  margin-top: 6%;
+}
+
+.keyboard {
+  display: flex;
+  flex-direction: row;
+  font-size: 22px;
+  margin: auto 0;
+}
+
+.nap {
+  display: flex;
+  flex-direction: row;
+  margin-left: 3%;
+}
+
+.mymess {
+  width: 50%;
+  height: 90%;
+  background-color: white;
+  border-radius: 5%;
+  margin: auto 0;
+  margin-left: 3%;
 }

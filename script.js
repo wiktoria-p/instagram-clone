@@ -16,6 +16,17 @@ function clickProfile(){
 
 profilePhoto.addEventListener("click", clickProfile)
 
+// window messege
+let mess = document. getElementById("mess")
+
+function clickMess() {
+  let windowMess = document.getElementById("messege")
+  windowMess.classList.toggle("active-messege")
+  windowMess.classList.toggle("messege") 
+}
+
+mess.addEventListener("click", clickMess)
+
 let timeline = document.getElementById("timeline")
 let names = ["ladydrama123", "blueberries", "lamadrama", "lordvader550", "martynka.official", "mamacita09", "henio78", "blackwidow", "marry.sol", "baby23254", "milenka", "angel345", "sexylola", "blabla"]
 let descriptions = ["life is life", "love is life", "bamboo is life", "i love my dog", "butterfly is beautyful", "coronavirus is fucking fake", "my cat is very sweet", "lalalalalala", "my new tatoo", "my new car", "weeding is coming", "i say yes", "i love my mom"]
@@ -74,5 +85,14 @@ function addPost(name = false, description = false){
   postCount++
 }
 
+function addStories(numberOfStories = 1){
+  let stories = document.getElementsByClassName("stories")[0]
+  for (let i = 0; i < numberOfStories; i++){
+    let story = document.getElementsByClassName("pp")[0].cloneNode(true)
+    story.src = `https://picsum.photos/seed/${i}/50/50`
+    stories.appendChild(story)
+  }
+}
 
+document.addEventListener("DOMContentLoaded", addStories.bind(null, 10))
 
